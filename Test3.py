@@ -25,11 +25,10 @@ py.sign_in('jpdepew', 'tHBUsofzHSeHQTHe2N1O')
 
 # Setting up some sort of data object thing
 
-
 class Node(object):
-    x = 0
-    y = 0
-    z = 0
+    x = 0.0
+    y = 0.0
+    z = 0.0
     name = ""
     left = None  # Node object or None
     right = None  # Node object or None
@@ -37,51 +36,16 @@ class Node(object):
 
 
 root = Node()
-root.x = 0
-root.y = 0
 
 b = Node()
 b.x = 1
 b.y = random.randint(0, 100)/100
 
+x = []
+y = []
+z = []
 
-# initializes a list of nodes up to depth
-def create_list(temp_node, i, depth):
-    if i < depth:
-        n1 = Node()
-        n1.x = random.randint(0, 100)/100
-        n1.y = random.randint(0, 100)/100
-        n2 = Node()
-        n2.x = random.randint(0, 100)/100
-        n2.y = random.randint(0, 100)/100
-        temp_node.left = n1
-        temp_node.right = n2
-
-        i += 1
-
-        create_list(temp_node.left, i, depth)
-        create_list(temp_node.right, i, depth)
-# END create_list
-
-
-# Prints the list in order. I think this is working, since root
-# is printed right in the middle with values 0, 0
-def in_order(temp_node):
-    if(temp_node != None):
-        in_order(temp_node.left)
-        print("(", temp_node.x, ",", temp_node.y, ")")
-        in_order(temp_node.right)
-# END in_order
-
-
-create_list(root,0,5)
-in_order(root)
-
-
-
-# THESE ARE THE LINES
-# Not sure why there are two traces, one with lines and one with markers. Maybe they can be combined.
-# Later on we can use values from the list of nodes instead of manually assigning them.
+# THESE ARE THE LINES - I'm not using these traces at the moment, I'm only using trace3 and trace4
 trace1 = go.Scatter3d(
     x=[0.713879997278, 0.651220480088, None, 0.748128185437, 0.651220480088, None, 0.67299208198, 0.651220480088, None,
        0.67299208198, 0.748128185437, None, 0.541920158828, 0.651220480088, None, 0.471151348359, 0.651220480088, None,
@@ -458,6 +422,90 @@ layout = {
     "width": 1000
 }
 
+
+# initializes a list of nodes up to depth
+def create_list(temp_node, i, depth):
+    if i < depth:
+        n1 = Node()
+        n1.x = temp_node.x + 1 #random.randint(0, 100)/100
+        n1.y = temp_node.y - 1 #random.randint(0, 100)/100
+        n1.z = random.uniform(0, 0.1)
+        n2 = Node()
+        n2.x = temp_node.x - 1 #random.randint(0, 100)/100
+        n2.y = temp_node.y - 1 #random.randint(0, 100)/100
+        n2.z = random.uniform(0, 0.1)
+        temp_node.left = n1
+        temp_node.right = n2
+
+        i += 1
+
+        create_list(temp_node.left, i, depth)
+        create_list(temp_node.right, i, depth)
+# END create_list
+
+
+# Prints the list in order. I think this is working, since root
+# is printed right in the middle with values 0, 0
+def in_order(temp_node):
+    if temp_node is not None:
+        in_order(temp_node.left)
+        print("(", temp_node.x, ",", temp_node.y, ")")
+        in_order(temp_node.right)
+# END in_order
+
+
+def assign_nodes(temp_node, i):
+    if temp_node is not None:
+        x.append(temp_node.x)
+        y.append(temp_node.y)
+        z.append(temp_node.z)
+
+        i += 1
+
+        assign_nodes(temp_node.right, i)
+        assign_nodes(temp_node.left, i)
+# END assign_nodes
+
+
+# ============= CREATE THE ACTUAL LIST AND ASSIGN NODES ===================== #
+create_list(root, 0, 5)
+assign_nodes(root, 0)
+
+trace3 = go.Scatter3d(
+    x=x,
+    y=y,
+    z=z,
+
+    hoverinfo="text",
+    marker={
+        #"color": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 3, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 5, 4, 0, 2, 3, 2, 2, 2,
+        #          2, 2, 2, 2, 2, 4, 6, 4, 4, 5, 0, 0, 7, 7, 8, 5, 5, 5, 5, 5, 5, 8, 5, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 9,
+        #          4, 4, 4, 4, 5, 10, 10, 4, 8],
+        "colorscale": "Viridis",
+        "line": {
+            "color": "rgb(50,50,50)",
+            "width": 0.5
+        },
+        "size": 6,
+        "symbol": "circle"
+    },
+    mode="markers",
+    name="actors",
+    text=["Myriel", "Napoleon"]
+)
+
+trace4 = go.Scatter3d(
+    x=x,
+    y=y,
+    z=z,
+    hoverinfo="none",
+    line={
+        "color": "rgb(125,125,125)",
+        "width": 1
+    },
+    mode="lines"
+)
+
 # Creating the figure
-fig = Figure(data=[trace1, trace2], layout=layout)
+fig = Figure(data=[trace3, trace4], layout=layout)
 plot_url = py.plot(fig)

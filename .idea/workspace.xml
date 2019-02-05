@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1b4b5438-2b38-43a8-8203-afc4b854afd4" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test2.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Test3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test3.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,16 +17,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Test3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="35" column="10" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
+            <state relative-caret-position="207">
+              <caret line="47" column="98" selection-start-line="47" selection-start-column="98" selection-end-line="47" selection-end-column="98" />
               <folding>
                 <element signature="e#784#810#0" expanded="true" />
-                <element signature="e#1600#11702#0" />
-                <element signature="e#11710#21851#0" />
-                <element signature="e#21859#32091#0" />
-                <element signature="e#32259#33524#0" />
-                <element signature="e#33532#34816#0" />
-                <element signature="e#34824#36121#0" />
+                <element signature="e#1742#11844#0" />
+                <element signature="e#11852#21993#0" />
+                <element signature="e#22001#32233#0" />
+                <element signature="e#32401#33666#0" />
+                <element signature="e#33674#34958#0" />
+                <element signature="e#34966#36263#0" />
+                <element signature="e#39596#40736#0" />
               </folding>
             </state>
           </provider>
@@ -47,9 +49,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/Test2.py" />
         <option value="$PROJECT_DIR$/venv/Test3.py" />
         <option value="$PROJECT_DIR$/Test3.1.py" />
+        <option value="$PROJECT_DIR$/Test2.py" />
         <option value="$PROJECT_DIR$/Test3.py" />
       </list>
     </option>
@@ -64,6 +66,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -75,7 +78,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -192,7 +194,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3217768" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31852654" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -255,25 +257,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/Test2" />
     <entry file="file://$PROJECT_DIR$/Test3.1.py" />
-    <entry file="file://$PROJECT_DIR$/Test2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Test2.py" />
     <entry file="file://$PROJECT_DIR$/Test3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="35" column="10" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
+        <state relative-caret-position="207">
+          <caret line="47" column="98" selection-start-line="47" selection-start-column="98" selection-end-line="47" selection-end-column="98" />
           <folding>
             <element signature="e#784#810#0" expanded="true" />
-            <element signature="e#1600#11702#0" />
-            <element signature="e#11710#21851#0" />
-            <element signature="e#21859#32091#0" />
-            <element signature="e#32259#33524#0" />
-            <element signature="e#33532#34816#0" />
-            <element signature="e#34824#36121#0" />
+            <element signature="e#1742#11844#0" />
+            <element signature="e#11852#21993#0" />
+            <element signature="e#22001#32233#0" />
+            <element signature="e#32401#33666#0" />
+            <element signature="e#33674#34958#0" />
+            <element signature="e#34966#36263#0" />
+            <element signature="e#39596#40736#0" />
           </folding>
         </state>
       </provider>
