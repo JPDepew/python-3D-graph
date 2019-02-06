@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b4b5438-2b38-43a8-8203-afc4b854afd4" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/ExampleStuff.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test2.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Test3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,18 +18,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Test3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="47" column="98" selection-start-line="47" selection-start-column="98" selection-end-line="47" selection-end-column="98" />
+            <state relative-caret-position="527">
+              <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
               <folding>
                 <element signature="e#784#810#0" expanded="true" />
-                <element signature="e#1742#11844#0" />
-                <element signature="e#11852#21993#0" />
-                <element signature="e#22001#32233#0" />
-                <element signature="e#32401#33666#0" />
-                <element signature="e#33674#34958#0" />
-                <element signature="e#34966#36263#0" />
-                <element signature="e#39596#40736#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/uscitiesv1.4.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-441">
+              <caret line="3078" column="89" selection-start-line="3078" selection-start-column="68" selection-end-line="3078" selection-end-column="89" />
             </state>
           </provider>
         </entry>
@@ -42,16 +45,22 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>holden</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/venv/Test3.py" />
         <option value="$PROJECT_DIR$/Test3.1.py" />
         <option value="$PROJECT_DIR$/Test2.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/ExampleStuff.py" />
         <option value="$PROJECT_DIR$/Test3.py" />
       </list>
     </option>
@@ -194,7 +203,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.31852654" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31527627" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -217,16 +226,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="827">
           <caret line="295" selection-start-line="295" selection-end-line="295" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="84" selection-start-line="14" selection-start-column="84" selection-end-line="14" selection-end-column="84" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -258,19 +257,41 @@
     <entry file="file://$PROJECT_DIR$/venv/Test2" />
     <entry file="file://$PROJECT_DIR$/Test3.1.py" />
     <entry file="file://$PROJECT_DIR$/Test2.py" />
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="291" column="52" selection-end-line="329" selection-end-column="1" />
+          <folding>
+            <element signature="e#142#10244#0" />
+            <element signature="e#10252#20393#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExampleStuff.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="290" column="25" selection-start-line="290" selection-start-column="25" selection-end-line="290" selection-end-column="25" />
+          <folding>
+            <element signature="e#142#10244#0" />
+            <element signature="e#10252#20393#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/uscitiesv1.4.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-441">
+          <caret line="3078" column="89" selection-start-line="3078" selection-start-column="68" selection-end-line="3078" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Test3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="47" column="98" selection-start-line="47" selection-start-column="98" selection-end-line="47" selection-end-column="98" />
+        <state relative-caret-position="527">
+          <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
           <folding>
             <element signature="e#784#810#0" expanded="true" />
-            <element signature="e#1742#11844#0" />
-            <element signature="e#11852#21993#0" />
-            <element signature="e#22001#32233#0" />
-            <element signature="e#32401#33666#0" />
-            <element signature="e#33674#34958#0" />
-            <element signature="e#34966#36263#0" />
-            <element signature="e#39596#40736#0" />
           </folding>
         </state>
       </provider>
