@@ -21,14 +21,24 @@ import csv
 ### I had to create a plotly account and use the credentials to use the graphing. ###
 py.sign_in('jpdepew', 'tHBUsofzHSeHQTHe2N1O')
 
+x = []
+y = []
+z = []
+cities = []
+
 # Lets see if we can import stuff from a csv file
-with open('uscitiesv1.4.csv', newline='') as csvfile:
+with open('worldcities.csv', newline='') as csvfile:
     thingo = csv.DictReader(csvfile)
     counter = 0
     for row in thingo:
         print(row['city'], row['lat'], row['lng'])
+        cities.append(row['city'])
+        x.append(row['lat'])
+        y.append(row['lng'])
+        z.append(random.uniform(0, 1.0))
+        print(z[counter])
         counter += 1
-        if counter > 100:
+        if counter > 500:
             print("Limit", counter - 1, "reached")
             break
 
@@ -48,14 +58,6 @@ class Node(object):
 
 
 root = Node()
-
-b = Node()
-b.x = 1
-b.y = random.randint(0, 100)/100
-
-x = []
-y = []
-z = []
 
 layout = {
     "annotations": [
@@ -80,29 +82,32 @@ layout = {
             "showgrid": False,
             "showline": False,
             "showticklabels": False,
-            "title": "",
-            "zeroline": False
+            "title": "x axis",
+            "zeroline": False,
+            "range": [20, 50]
         },
         "yaxis": {
             "showbackground": False,
             "showgrid": False,
             "showline": False,
             "showticklabels": False,
-            "title": "",
-            "zeroline": False
+            "title": "y axis",
+            "zeroline": False,
+            "range": [75, 130]
         },
         "zaxis": {
             "showbackground": False,
             "showgrid": False,
             "showline": False,
             "showticklabels": False,
-            "title": "",
-            "zeroline": False
+            "title": "z axis",
+            "zeroline": False,
+            "range": [-15, 15]
         }
     },
     "showlegend": False,
     "title": "3D visualization",
-    "width": 1000
+    "width": 1920
 }
 
 
@@ -151,8 +156,8 @@ def assign_nodes(temp_node, i):
 
 
 # ============= CREATE THE ACTUAL LIST AND ASSIGN NODES ===================== #
-create_list(root, 0, 5)
-assign_nodes(root, 0)
+#create_list(root, 0, 5)
+#assign_nodes(root, 0)
 
 trace3 = go.Scatter3d(
     x=x,
@@ -161,9 +166,9 @@ trace3 = go.Scatter3d(
 
     hoverinfo="text",
     marker={
-        #"color": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 3, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 5, 4, 0, 2, 3, 2, 2, 2,
-        #          2, 2, 2, 2, 2, 4, 6, 4, 4, 5, 0, 0, 7, 7, 8, 5, 5, 5, 5, 5, 5, 8, 5, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 9,
-        #          4, 4, 4, 4, 5, 10, 10, 4, 8],
+        "color": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 3, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 5, 4, 0, 2, 3, 2, 2, 2,
+                  2, 2, 2, 2, 2, 4, 6, 4, 4, 5, 0, 0, 7, 7, 8, 5, 5, 5, 5, 5, 5, 8, 5, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 9,
+                  4, 4, 4, 4, 5, 10, 10, 4, 8],
         "colorscale": "Viridis",
         "line": {
             "color": "rgb(50,50,50)",
@@ -174,7 +179,7 @@ trace3 = go.Scatter3d(
     },
     mode="markers",
     name="actors",
-    text=["Myriel", "Napoleon"]
+    text=cities
 )
 
 trace4 = go.Scatter3d(
@@ -190,5 +195,5 @@ trace4 = go.Scatter3d(
 )
 
 # Creating the figure
-fig = Figure(data=[trace3, trace4], layout=layout)
+fig = Figure(data=[trace3], layout=layout)
 plot_url = py.plot(fig)
