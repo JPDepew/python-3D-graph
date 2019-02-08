@@ -1,4 +1,10 @@
 Don't know if these are any good
 
+Breadth first search:
 https://link.springer.com/chapter/10.1007%2F978-3-540-27810-8_41
 https://www.aaai.org/Papers/AAAI/1991/AAAI91-067.pdf
+
+Min cut:
+https://ieeexplore.ieee.org/abstract/document/1676460
+https://dl.acm.org/citation.cfm?id=263872
+https://books.google.com/books?hl=en&lr=&id=ZpYca36h464C&oi=fnd&pg=PA225&dq=min+cut+network&ots=0vj-UMQVLk&sig=-YAODH_ByWiQU0bQwRO_oyWWi9s#v=onepage&q=min%20cut%20network&f=false
