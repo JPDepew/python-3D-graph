@@ -8,3 +8,17 @@ Min cut:
 https://ieeexplore.ieee.org/abstract/document/1676460
 https://dl.acm.org/citation.cfm?id=263872
 https://books.google.com/books?hl=en&lr=&id=ZpYca36h464C&oi=fnd&pg=PA225&dq=min+cut+network&ots=0vj-UMQVLk&sig=-YAODH_ByWiQU0bQwRO_oyWWi9s#v=onepage&q=min%20cut%20network&f=false
+
+
+Eight Puzzle:
+http://local.cdn.cs50.net/2010/fall/psets/3/saml.pdf
+http://www.aaai.org/Papers/AAAI/1986/AAAI86-027.pdf
+https://s3.amazonaws.com/academia.edu.documents/33181802/93ijcai_%281%29.pdf?AWSAccessKeyId=AKIAIWOWYYGZ2Y53UL3A&Expires=1549738542&Signature=ow9%2BtDfiUUdKeYOYJaApNmeG2Tc%3D&response-content-disposition=inline%3B%20filename%3DComplete_Solution_of_the_Eight-Puzzle_an.pdf
+https://cs.wmich.edu/~elise/courses/cs431/puzzle.pdf
+
+I think this one is good:
+http://larc.unt.edu/techreports/LARC-2014-02.pdf
+
+https://www.aaai.org/ocs/index.php/SOCS/SOCS10/paper/viewFile/2101/2515
+Possibility:
+https://www.ijcai.org/Proceedings/77-1/Papers/075.pdf

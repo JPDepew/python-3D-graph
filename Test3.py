@@ -21,6 +21,21 @@ import csv
 ### I had to create a plotly account and use the credentials to use the graphing. ###
 py.sign_in('jpdepew', 'tHBUsofzHSeHQTHe2N1O')
 
+# Setting up some sort of data object thing
+
+class Node(object):
+    x = 0.0
+    y = 0.0
+    z = 0.0
+    name = ""
+    parent = None
+    left = None  # Node object or None
+    right = None  # Node object or None
+# END Node
+
+
+root = Node()
+
 x = []
 y = []
 z = []
@@ -31,12 +46,11 @@ with open('worldcities.csv', newline='') as csvfile:
     thingo = csv.DictReader(csvfile)
     counter = 0
     for row in thingo:
-        print(row['city'], row['lat'], row['lng'])
+        #print(row['city'], row['lat'], row['lng'])
         cities.append(row['city'])
         x.append(row['lat'])
         y.append(row['lng'])
         z.append(random.uniform(0, 1.0))
-        print(z[counter])
         counter += 1
         if counter > 500:
             print("Limit", counter - 1, "reached")
@@ -44,20 +58,6 @@ with open('worldcities.csv', newline='') as csvfile:
 
 # Below are the two traces that make up the graph. One is for lines, and one is for dots.
 # They have data points in the x, y and z positions to make up the graphs
-
-# Setting up some sort of data object thing
-
-class Node(object):
-    x = 0.0
-    y = 0.0
-    z = 0.0
-    name = ""
-    left = None  # Node object or None
-    right = None  # Node object or None
-# END Node
-
-
-root = Node()
 
 layout = {
     "annotations": [
@@ -111,24 +111,29 @@ layout = {
 }
 
 
-# initializes a list of nodes up to depth
-def create_list(temp_node, i, depth):
-    if i < depth:
+counterdude = 0
+
+# initializes a list of nodes to the length of the cities array
+def create_list(temp_node, length):
+    global counterdude
+    if counterdude < len(cities):
         n1 = Node()
-        n1.x = temp_node.x + 1 #random.randint(0, 100)/100
-        n1.y = temp_node.y - 1 #random.randint(0, 100)/100
-        n1.z = random.uniform(0, 0.1)
+        n1.parent = temp_node
+
         n2 = Node()
-        n2.x = temp_node.x - 1 #random.randint(0, 100)/100
-        n2.y = temp_node.y - 1 #random.randint(0, 100)/100
-        n2.z = random.uniform(0, 0.1)
+        n2.parent = temp_node
+
         temp_node.left = n1
         temp_node.right = n2
+        temp_node.x = x[counterdude]
+        temp_node.y = y[counterdude]
+        temp_node.z = z[counterdude]
+        temp_node.name = cities[counterdude]
+        print(temp_node.name)
 
-        i += 1
-
-        create_list(temp_node.left, i, depth)
-        create_list(temp_node.right, i, depth)
+        counterdude += 1
+        create_list(temp_node.left, length)
+        create_list(temp_node.right, length)
 # END create_list
 
 
@@ -156,7 +161,8 @@ def assign_nodes(temp_node, i):
 
 
 # ============= CREATE THE ACTUAL LIST AND ASSIGN NODES ===================== #
-#create_list(root, 0, 5)
+create_list(root, 30)
+print(root.x, root.right.x, root.right.parent.x)
 #assign_nodes(root, 0)
 
 trace3 = go.Scatter3d(
@@ -196,4 +202,4 @@ trace4 = go.Scatter3d(
 
 # Creating the figure
 fig = Figure(data=[trace3], layout=layout)
-plot_url = py.plot(fig)
+#plot_url = py.plot(fig)
